@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Vendor Shop Seller Activation Email</title>
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      color: #333;
+    }
+    .email-container {
+      max-width: 500px;
+      background-color: #ffffff;
+      padding: 30px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    .otp-box {
+      background-color: #ecf0f1;
+      padding: 15px 20px;
+      font-size: 24px;
+      letter-spacing: 5px;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    p {
+      font-size: 15px;
+    }
+    .footer {
+      font-size: 12px;
+      text-align: center;
+      color: #888;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+    <div class="email-container">
+      <h2>Hello <%= name %>,</h2>
+      <p>Welcome to <strong>Your Multi-Vendor Marketplace</strong>!</p>
+      <p>Please use the OTP below to verify your email address:</p>
+
+      <div class="otp-box"><%= otp %></div>
+
+      <p>This code is valid for the next <strong>10 minutes</strong>. If you did not request this, please ignore this email.</p>
+
+      <p>Thank you,<br>
+      The Marketplace Team</p>
+
+      <div class="footer">
+        &copy; <%= new Date().getFullYear() %> Your Multi-Vendor Marketplace. All rights reserved.
+      </div>
+    </div>
+  </body>
+</html>
